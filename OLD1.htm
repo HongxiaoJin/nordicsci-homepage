@@ -1,0 +1,600 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Nordic Scientific Ltd</title>
+<style type="text/css">
+.auto-style1 {
+	margin-left: 139px;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">var _clustrmaps = {'url' : 'http://nordicsci.com', 'user' : 1169828, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2015-05-10', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www3.clustrmaps.com/user/55711d9a4"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/nordicsci.com-thumb.jpg" alt="Locations of visitors to this page" /></a> 
+   
+<font size="1">  
+   
+<div id="clustrmaps-widget" style="width: 127px"></div>
+              
+</font>                                                             
+                                                   
+  </noscript>
+
+
+<TABLE height=67 cellSpacing=0 cellPadding=0 width=884 align=center border=0>
+  <TR> 
+   
+<font size="1">  
+   
+    <TD height=67 width="1471">
+      <p align="left"><font size="1"><blink><font face="NodicSci">
+	  <img border="0" src="t7.gif" width="105" height="85" class="auto-style1"></font></blink></font><img border="0" src="t1.jpg" width="71" height="85"><img border="0" src="t2.jpg" width="156" height="85"><font size="1"><img border="0" src="t3.jpg" width="129" height="85"><img border="0" src="t4.jpg" width="124" height="85"><img border="0" src="t5.jpg" width="168" height="85"><img border="0" src="t6.jpg" width="59" height="85"><img border="0" src="index.1.jpg" width="69" height="86"></font>                                                             
+                                                   
+</TD>
+              
+</font>                                                             
+                                                   
+  </TR>
+</TABLE>
+              
+<TABLE height=12 cellSpacing=0 cellPadding=0 width=872 align=center border=0>
+  <TR> 
+   
+<font size="1">  
+   
+    <TD height=12 width="454">&nbsp;</TD>
+              
+</font>                                                             
+                                                   
+    <TD width="619" height="12">  
+   
+<p align="right"><blink><font face="华文新魏" size="5" color="#0000FF">
+<marquee width="493" height="23" align="middle" behavior="alternate">GeoScience: Geophysics, Geology, Geography, Geomancy, Battery</marquee>
+</font></blink><font size="2" color="##008080">&nbsp;&nbsp;&nbsp;&nbsp;</font></p>                         
+                                                   
+    </TD>
+   
+<font size="1">  
+   
+    <TD width="386" height="12">  
+   
+<p align="right">  
+   
+</p>
+                                                   
+    </TD>
+              
+</font>                                                             
+                                                   
+  </TR>
+</TABLE>
+              
+<hr> 
+  
+<font color="#990033">  
+   
+<font size="1">  
+   
+<TABLE height=10 cellSpacing=0 cellPadding=0 width=719 align=center border=0>
+  <TR> 
+    <TD height=1 width="124"></TD>
+    <TD width="591">  
+   
+<font size="1">  
+   
+<SCRIPT language=jscript>
+var mmenus    = new Array();
+var misShow   = new Boolean(); 
+misShow=false;
+var misdown   = new Boolean();
+misdown=false;
+var msrcel; 
+var mfromel;  
+var mtoel; 
+var musestatus=false;
+var mthestatus="";
+var mpopTimer = 0;
+mmenucolor='#009AFF';mfontcolor='#FFFFFF';mmenuoutcolor='#009AFF';mmenuincolor='#009AFF';mmenuoutbordercolor='#009AFF';mmenuinbordercolor='#009AFF';mmidoutcolor='#0099FF';mmidincolor='#0099FF';mmenuovercolor='#FF0000';mitemedge='0';msubedge='1';mmenuunitwidth=90;mmenuitemwidth=90;mmenuheight=22;mmenuwidth='500';mmenuadjust=10;mmenuadjustV=0;mfonts='font-family: 宋体; font-size: 10pt; color: #FFFFFF; ';mcursor='default';
+
+function stoperror(){
+return true;
+}
+window.onerror=stoperror;
+function mpopOut() {
+mpopTimer = setTimeout('mallhide()', 500);
+}
+function getReal(el, type, value) {
+	temp = el;
+	while ((temp != null) && (temp.tagName != "BODY")) {
+		if (eval("temp." + type) == value) {
+			el = temp;
+			return el;
+		}
+		temp = temp.parentElement;
+	}
+	return el;
+}
+
+
+function mMenuRegister(menu) 
+{
+  mmenus[mmenus.length] = menu
+  return (mmenus.length - 1)
+}
+function mMenuItem(caption,command,target,isline,statustxt,img,sizex,sizey,pos){
+	this.caption=caption;
+	this.command=command;
+	this.target=target;
+	this.isline=isline;
+	this.statustxt=statustxt;
+	this.img=img;
+	this.sizex=sizex;
+	this.sizey=sizey;
+	this.pos=pos;
+}
+function mMenu(caption,command,target,img,sizex,sizey,pos){
+	this.items = new Array();
+	this.caption=caption;
+	this.command=command;
+	this.target=target;
+	this.img=img;
+	this.sizex=sizex;
+	this.sizey=sizey;
+	this.pos=pos;
+	this.id=mMenuRegister(this);
+}
+function mMenuAddItem(item)
+{
+  this.items[this.items.length] = item
+  item.parent = this.id;
+  this.children=true;
+}
+
+mMenu.prototype.addItem = mMenuAddItem;
+function mtoout(src){
+
+src.style.borderLeftColor=mmenuoutbordercolor;
+src.style.borderRightColor=mmenuinbordercolor;
+src.style.borderTopColor=mmenuoutbordercolor;
+src.style.borderBottomColor=mmenuinbordercolor;
+src.style.backgroundColor=mmenuoutcolor;
+src.style.color=mmenuovercolor;
+}
+function mtoin(src){
+
+src.style.borderLeftColor=mmenuinbordercolor;
+src.style.borderRightColor=mmenuoutbordercolor;
+src.style.borderTopColor=mmenuinbordercolor;
+src.style.borderBottomColor=mmenuoutbordercolor;
+src.style.backgroundColor=mmenuincolor;
+src.style.color=mmenuovercolor;
+}
+function mnochange(src){
+src.style.borderLeftColor=mmenucolor;
+src.style.borderRightColor=mmenucolor;
+src.style.borderTopColor=mmenucolor;
+src.style.borderBottomColor=mmenucolor;
+src.style.backgroundColor='';
+src.style.color=mfontcolor;
+
+}
+function mallhide(){
+	for(var nummenu=0;nummenu<mmenus.length;nummenu++){
+		var themenu=document.all['mMenu'+nummenu]
+		var themenudiv=document.all['mmenudiv'+nummenu]
+                mnochange(themenu);
+                mmenuhide(themenudiv);
+                }
+}
+function mmenuhide(menuid){
+menuid.style.filter='Alpha(Opacity=100)';
+menuid.style.visibility='hidden';
+misShow=false;
+}
+function mmenushow(menuid,pid){
+menuid.style.filter='Alpha(Opacity=80)';
+menuid.style.left=mposflag.offsetLeft+pid.offsetLeft+mmenuadjust;menuid.style.top=mposflag.offsetTop+mmenutable.offsetHeight+mmenuadjustV+1;
+if(mmenuitemwidth+parseInt(menuid.style.left)>document.body.clientWidth)
+menuid.style.left=document.body.clientWidth-mmenuitemwidth;
+menuid.style.visibility='visible';
+misShow=true;
+}
+function mmenu_over(menuid,x){
+mtoel = getReal(window.event.toElement, "className", "coolButton");
+mfromel = getReal(window.event.fromElement, "className", "coolButton");
+if (mtoel == mfromel) return;
+msrcel = window.event.srcElement;
+if(x<0){
+  misShow = false;
+  mallhide();
+  mtoout(msrcel);
+}else{
+
+  mallhide();
+  mtoin(msrcel);
+  mmenushow(menuid,eval("mMenu"+x));
+
+}
+clearTimeout(mpopTimer);
+}
+function mmenu_out(menuid){
+mtoel = getReal(window.event.toElement, "className", "coolButton");
+mfromel = getReal(window.event.fromElement, "className", "coolButton");
+if (mtoel == mfromel) return;	
+msrcel = window.event.srcElement;
+if (misShow){
+mtoin(msrcel);
+}else{
+mnochange(msrcel);
+}
+mpopOut()
+}
+function mmenu_down(menuid,x){
+msrcel = getReal(window.event.srcElement, "className", "coolButton");
+  if(misShow){
+  mmenuhide(menuid);
+  mtoout(msrcel);
+  }
+  else{
+  mtoin(msrcel);
+  mmenushow(menuid,eval("mMenu"+x));
+  misdown=true;
+  }
+}
+function mmenu_up(){
+  misdown=false;
+}
+function mmenuitem_over(menuid){
+msrcel = getReal(window.event.srcElement, "className", "coolButton");
+if(misdown){
+	mtoin(msrcel);
+}
+else{
+mtoout(msrcel);
+}
+if(mthestatus!=""){
+	musestatus=true;
+	window.status=mthestatus;
+}
+clearTimeout(mpopTimer);
+}
+function mmenuitem_out(menuid){
+msrcel = getReal(window.event.srcElement, "className", "coolButton");
+mnochange(msrcel);
+if(musestatus)window.status="";
+mpopOut()
+}
+function mmenuitem_down(menuid){
+msrcel = getReal(window.event.srcElement, "className", "coolButton");
+mtoin(msrcel)
+misdown=true;
+}
+function mmenuitem_up(menuid){
+msrcel = getReal(window.event.srcElement, "className", "coolButton");
+mtoout(msrcel)
+misdown=false;
+}
+function mexec2(x){
+var cmd;
+if(mmenus[x].target=="blank"){
+  cmd = "window.open('"+mmenus[x].command+"')";
+}else{
+  cmd = mmenus[x].target+".location='"+mmenus[x].command+"'";
+}
+eval(cmd);
+}
+function mexec(x,i){
+var cmd;
+if(mmenus[x].items[i].target=="blank"){
+  cmd = "window.open('"+mmenus[x].items[i].command+"')";
+}else{
+  cmd = mmenus[x].items[i].target+".location='"+mmenus[x].items[i].command+"'";
+}
+eval(cmd);
+}
+function mbody_click(){
+
+if (misShow){
+	msrcel = getReal(window.event.srcElement, "className", "coolButton");
+	for(var x=0;x<=mmenus.length;x++){
+		if(msrcel.id=="mMenu"+x)
+		return;
+	}
+	mallhide();
+}
+}
+document.onclick=mbody_click;
+var mMenuBodyRef;
+function mwritetodocument(){
+      var mwb=1;
+      for(var i in document.all){
+              if (document.all[i].tagName == 'BODY'){
+                     mMenuBodyRef = document.all[i]
+                     var stringx='<div id="mposflag" style="position:absolute;"></div><table  id=mmenutable border=0 cellpadding=0 cellspacing=2 width='+mmenuwidth+' height='+mmenuheight+' bgcolor='+mmenucolor+
+                     ' onselectstart="event.returnValue=false"'+
+                     ' style="filter:Alpha(Opacity=80);cursor:'+mcursor+';'+mfonts+
+                     ' border-left: '+mwb+'px solid '+mmenuoutbordercolor+';'+
+                     ' border-right: '+mwb+'px solid '+mmenuinbordercolor+'; '+
+                     'border-top: '+mwb+'px solid '+mmenuoutbordercolor+'; '+
+                     'border-bottom: '+mwb+'px solid '+mmenuinbordercolor+'; padding:0px"><tr>'
+                     for(var x=0;x<mmenus.length;x++){
+                     	var thismenu=mmenus[x];
+                     	var imgsize;
+                     	      if(thismenu.sizex=="0"&&thismenu.sizey=="0"){
+                     	        imgsize="";
+                     	      }else{
+                     	        imgsize=" width="+thismenu.sizex+" height="+thismenu.sizey;
+                     	      }
+                     	var ifspace;
+                     	      if(thismenu.caption==""){
+                     	        ifspace="";
+                     	      }else{
+                     	        ifspace=" ";
+                     	      }
+                     	stringx += "<td class=coolButton id=mMenu"+x+" style='border: "+mitemedge+"px solid "+mmenucolor+
+                     	"' width="+mmenuunitwidth+"px onmouseover=mmenu_over(mmenudiv"+x+
+                     	","+x+") onmouseout=mmenu_out(mmenudiv"+x+
+                     	") onmousedown=mmenu_down(mmenudiv"+x+","+x+")";
+                     	      if(thismenu.command!=""){
+                     	          stringx += " onmouseup=mexec2("+x+");mmenu_up();";
+                     	      }else{
+                     	      	  stringx += " onmouseup=mmenu_up()";
+                     	      }
+                     	      if(thismenu.pos=="0"){
+                     	          stringx += " align=center><img align=absmiddle src="+thismenu.img+imgsize+">"+ifspace+thismenu.caption+"</td>";	
+                     	      }else if(thismenu.pos=="1"){
+                     	          stringx += " align=center>"+thismenu.caption+ifspace+"<img align=absmiddle src="+thismenu.img+imgsize+"></td>";	
+                     	      }else if(thismenu.pos=="2"){
+                     	          stringx += " align=center background="+thismenu.img+">"+thismenu.caption+"</td>";	
+                     	      }else{
+                     	          stringx += " align=center>"+thismenu.caption+"</td>";
+                     	      }
+                     	stringx += "";
+                     }
+                     stringx+="<td width=*> </td></tr></table>";
+                     
+                     
+                     for(var x=0;x<mmenus.length;x++){
+                     	thismenu=mmenus[x];
+                        if(x<0){
+                        stringx+='<div id=mmenudiv'+x+' style="visiable:none"></div>';
+                        }else{
+                        stringx+='<div id=mmenudiv'+x+
+                        ' style="filter:Alpha(Opacity=80);cursor:'+mcursor+';position:absolute;'+
+                        'width:'+mmenuitemwidth+'px; z-index:'+(x+50);
+                        if(mmenuinbordercolor!=mmenuoutbordercolor&&msubedge=="0"){
+                        stringx+=';border-left: 1px solid '+mmidoutcolor+
+                        ';border-top: 1px solid '+mmidoutcolor;}
+                        stringx+=';border-right: 1px solid '+mmenuinbordercolor+
+                        ';border-bottom: 1px solid '+mmenuinbordercolor+';visibility:hidden" onselectstart="event.returnValue=false">\n'+
+                     	'<table  width="100%" border="0" height="100%" align="left" cellpadding="0" cellspacing="2" '+
+                     	'style="'+mfonts+' border-left: 1px solid '+mmenuoutbordercolor;
+                        if(mmenuinbordercolor!=mmenuoutbordercolor&&msubedge=="0"){
+                     	stringx+=';border-right: 1px solid '+mmidincolor+
+                     	';border-bottom: 1px solid '+mmidincolor;}
+                     	stringx+=';border-top: 1px solid '+mmenuoutbordercolor+
+                     	';padding: 4px" bgcolor='+mmenucolor+'>\n'
+                     	for(var i=0;i<thismenu.items.length;i++){
+                     		var thismenuitem=thismenu.items[i];
+                     		var imgsize;
+                     	          if(thismenuitem.sizex=="0"&&thismenuitem.sizey=="0"){
+                     	             imgsize=""
+                     	          }else{
+                     	             imgsize=" width="+thismenuitem.sizex+" height="+thismenuitem.sizey
+                     	          }
+                     	        var ifspace;
+                     	          if(thismenu.caption==""){
+                     	            ifspace="";
+                     	          }else{
+                     	            ifspace=" ";
+                     	          }
+                     		if(!thismenuitem.isline){
+                     		stringx += "<tr><td class=coolButton style='border: "+mitemedge+"px solid "+mmenucolor+
+                     		"' width=100% height=15px onmouseover=\"mthestatus='"+thismenuitem.statustxt+"';mmenuitem_over(mmenudiv"+x+
+                     		");\" onmouseout=mmenuitem_out(mmenudiv"+x+
+                     		") onmousedown=mmenuitem_down(mmenudiv"+x+") onmouseup=";
+ 				stringx += "mexec("+x+","+i+");mmenuitem_up(mmenudiv"+x+") ";
+ 				if(thismenuitem.pos=="0"){
+                     	            stringx += "><img align=absmiddle src="+thismenuitem.img+imgsize+">"+ifspace+thismenuitem.caption+"</td></tr>";	
+                     	          }else if(thismenuitem.pos=="1"){
+                     	            stringx += ">"+thismenuitem.caption+ifspace+"<img align=absmiddle src="+thismenuitem.img+imgsize+"></td></tr>";	
+                     	          }else if(thismenuitem.pos=="2"){
+                     	            stringx += "background="+thismenuitem.img+">"+thismenuitem.caption+"</td></tr>";	
+                     	          }else{
+                     	            stringx += ">"+thismenuitem.caption+"</td></tr>";
+                     	          }
+ 				}else{
+                     		stringx+='<tr><td height="1" background="hr.gif"><img border="0" src="none.gif" width="1" height="1"></td></tr>\n';
+                     		}
+                     	}stringx+='</table>\n</div>'
+                     	}
+                     	
+                }
+                
+                     document.write("<div align='left'>"+stringx+"</div>");
+      break
+    }
+  }
+}
+
+
+function document_load(){
+	mwritetodocument();
+
+
+}
+mpmenu1=new mMenu('仪器开发','','self','','','','');
+mpmenu1.addItem(new mMenuItem('振动测试','lst.htm','blank',false,'地基基础测试数据采集系统……','','','',''));
+mpmenu1.addItem(new mMenuItem('无线遥测','plan.htm','blank',false,'无线监测解决方案……','','','',''));
+
+
+mpmenu2=new mMenu('工程物探','','self','','','','');
+mpmenu2.addItem(new mMenuItem('折射 CT','rayfract.htm','blank',false,'地震折射CT波速图像、解释以及钻孔资料对比','','','',''));
+mpmenu2.addItem(new mMenuItem('井中 CT','ct.htm','blank',false,'单孔地震波速CT','','','',''));
+mpmenu2.addItem(new mMenuItem('电法 CT','S_R.htm','blank',false,'访问我的主页','','','',''));
+mpmenu2.addItem(new mMenuItem('地质雷达','radar.htm','blank',false,'地质雷达与折射对比','','','',''));
+mpmenu2.addItem(new mMenuItem('多道面波','masw.htm','blank',false,'多道瞬态面波','','','',''));
+
+mpmenu3=new mMenu('业务范围','','self','','','','');
+mpmenu3.addItem(new mMenuItem('业务联系','contact.htm','blank',false,'业务内容及收费标准','','','',''));
+mpmenu3.addItem(new mMenuItem('基桩检测','pile.htm','blank',false,'基桩高低应变测试','','','',''));
+mpmenu3.addItem(new mMenuItem('地基检测','found.htm','blank',false,'地基基础测试','','','',''));
+
+mpmenu4=new mMenu('同学老乡','','self','','','','');
+mpmenu4.addItem(new mMenuItem('西峡同乡','xixia.htm','blank',false,'北京西峡同乡会','','','',''));
+mpmenu4.addItem(new mMenuItem('高中同学','hs.htm','blank',false,'高中同学通讯录','','','',''));
+mpmenu4.addItem(new mMenuItem('大学同学','univ.htm','blank',false,'海大物探91级通讯录','','','',''));
+mpmenu4.addItem(new mMenuItem('赵家弟子','mas.htm','blank',false,'赵永贵教授四大弟子','','','',''));
+mpmenu4.addItem(new mMenuItem('王家弟子','phd.doc','blank',false,'王思敬院士桃李满天下','','','',''));
+
+mpmenu5=new mMenu('其它内容','','self','','','','');
+mpmenu5.addItem(new mMenuItem('环评上岗','huanping.htm','blank',false,'环评上岗培训复习题，118期','','','',''));
+mpmenu5.addItem(new mMenuItem('内心独白','nxdb.htm','blank',false,'内心独白','','','',''));
+mpmenu5.addItem(new mMenuItem('动测延期','http://www.cabr-betc.com/zhuangz1.htm','blank',false,'动测资质延期','','','',''));
+mpmenu5.addItem(new mMenuItem('现在忙啥','now.htm','blank',false,'最近工作……','','','',''));
+mpmenu5.addItem(new mMenuItem('过去忙啥','past.htm','blank',false,'过去工作……','','','',''));
+
+</SCRIPT>
+	&nbsp; <SCRIPT>document_load()</SCRIPT>                                    
+              
+</font>                                                             
+                                                   
+    </TD>
+  </TR>
+</TABLE>
+              
+</font>                                                             
+                                                   
+                  </font>                                                             
+                                                   
+<font size="1">             
+                                                
+<p align="right"><MAP 
+name=2logos416163e5>
+   <AREA alt="地震折射CT波速图像、解释以及钻孔资料对比"  coords='16, 59, 216, 217' href="rayfract.htm" shape=RECTclass="maplink">
+   <AREA alt="单孔地震波速CT" coords='222, 62, 377, 227' href="ct.htm" shape=RECT  class="maplink">
+   <AREA alt="地质雷达" coords='401, 34, 619, 145' href="radar.htm" shape=RECT class="maplink">
+   <AREA alt="多道瞬态面波" coords='386, 157, 456, 228' href="masw.htm" shape=RECT class="maplink" >
+   <AREA alt="环形自然电位" coords='464, 163, 528, 227' shape=RECT>
+   <AREA alt="四极对称电测深" coords='535, 161, 612, 227' shape=RECT>
+   <AREA alt="井下彩色电视" coords='622, 35, 671, 440'  shape=RECT>
+   <AREA alt="地震折射CT与电阻率CT结果对比" coords='30, 262, 252, 458' href="S_R.htm" shape=RECT class="maplink">
+   <AREA alt="电阻率CT" coords='258, 244, 604, 460'  shape=RECT>
+   </MAP><!--webbot b-disallow-first-item="TRUE" bot="Validation" --><select class="font" name="Designers" onChange="location.href = this.options[this.selectedIndex].value;" size="1" style="background-color: #00FF00; font-size: 10pt; border-left-style: none; border-left-width: medium" 宋体?;?>
+            <option selected>友情链接</option>
+            <option value="http://www.cigis.com.cn">建设综合勘察研究设计院</option>
+            <option value="http://www.igcas.ac.cn/index.html">中国科学院地质与地球物理研究所</option>
+            <option value="http://www.ouc.edu.cn/index.htm">青岛海洋大学</option>
+            <option value="http://www.xxyg.com.cn">西峡县第一高级中学</option>
+            <option value="http://www.cgs.org.cn/society/society.html">中国地球物理学会</option>
+            <option value="http://www.geot.com.cn/geo/">中国建筑学会工程勘察分会 
+            </option>
+          </select>下载<a href="BXViewer.exe">PDG</a>阅读器
+
+<p align="center"><IMG alt="云冈石窟防水保护工程物探成果图"  border="0"    
+   src="A0-2.jpg" useMap=#2logos416163e5 vspace=2 width="686" height="490" </p>
+
+<p align="center"><MAP 
+name=FPMap0>
+  <AREA alt="物探观测布置
+        工程物探测区位于云冈石窟顶部约4km2范围内，南起石窟崖壁，北至水泉村，西起石窟西侧崖壁，东至工人村北；重点区域是石窟顶部围墙内约0.4km2的范围。测区地处丘陵地区，大部分区域地形较为平整，局部为陡崖峭壁，地形起伏较大。"
+        coords='19, 67, 112, 218' shape=RECT style="text-decoration: blink">
+  <AREA alt="地表雨水滞留区分布示意图
+        大气降雨到达地表后，一部分雨水在地表随地形起伏产生地表迳流，一部分穿过第四系入渗到基岩面。该图为地表雨水滞留区分布示意图。三维图示为基岩面，上覆阴影显示了地表水的滞留情况，深色表示滞留水量多，浅色表示少。"
+        coords='120, 63, 287, 152'  shape=RECT>
+  <AREA alt="第四系粉土层厚度等值线图
+        由图可以看出，粉土层厚度一般为0.2～6.5m，平均厚度为1.5m。围墙内粉土层平均厚度为1.1m，总体积为3.67×105m3。东院及西院明城墙等构筑物附近粉土层平均厚度为1.0m左右。围墙内粉土层厚度小于1.0m的区域见图阴影部分，总面积约195000m2 ，颜色由深到浅表示厚度由1.0m变化到0m。" 
+        coords='118, 161, 280, 256'  shape=RECT>
+  <AREA alt="基岩顶板等高线三维图
+        根据浅层地震勘探结果，结合其它地质资料，绘制出基岩顶板等高线三维图。由图可以看出，基岩面起伏大致和地形起伏一致，大部分基岩面坡度比地形坡度缓。
+        基岩面起伏情况，对从地表入渗的大气降雨沿基岩面的迳流方向起了重要的控制作用。"
+         coords='297, 64, 516, 229' shape=RECT>
+  <AREA alt="二窟泉成因解释
+        二窟泉水来自于北部区域。自然电位显示水流优势方向主要为北西、北东方向，局部显示正北方向。说明泉水主要来自北向，由于破碎区域发育走向不规则，形成了复杂的水流通道网络。二窟泉西北部大片较厚的第四系、风化层、和泥岩层的分布，为该区大气降雨赋存提供了条件，赋存的水随网状通道，汇集到二窟泉流出。"
+         coords='531, 65, 667, 204'  shape=RECT>
+  <AREA alt="风化分层及裂隙分布规律
+        图中绘出了基岩中裂隙破碎带的平面分布规律。由图可以看出，东院内破碎带的分布广，西院内主要集中在几个区域。由浅到深，基岩中裂隙及破碎带越来越不发育。浅部破碎带连通性好，深部连通性差。" 
+        coords='18, 269, 187, 469'  shape=RECT>
+  <AREA alt="泥岩夹层分布规律
+        结合12个深孔钻探结果，此次高密度电法工作圈定的泥岩层按照高程从上到下主要分四类：
+        J2y5：分布在1165m高程左右，上面是第四纪覆盖层，主要分布于八字墙东侧和整个东院地形高的区域。从附图5可以看出，西院八字墙东侧厚度较薄，一般3m左右，局部变薄；东院内泥岩的分布较厚，一般5m～6m左右，连续性好。对比这两个区域内的J2y5泥岩层，可以看出，东院的电阻率普遍偏低，1993年山西省地矿局216勘察处工程队在本区的电法工作亦有同样特征。
+        J2y3：分布在1155m高程左右，主要分布于西院，厚度及及高程变化大。附图5中西院八字墙西和八字墙内的各电法剖面均有反映，其上覆地层为第四系。西院八字墙东侧该高程没有分布，电法R3101测线反映1152m高程左右有泥岩小夹层分布，向北10m测线该夹层尖灭。
+        J2y2：主要分布在1140m～1145m高程左右，石窟崖壁露头有清楚的反映。层厚2m～3m，薄的地方几十公分，不连续。" 
+        coords='203, 265, 403, 470'  shape=RECT>
+  <AREA alt="窟顶基岩裂隙、赋水区分布图
+        上图为物探结果综合图，下图为窟顶基岩裂隙、赋水区分布图，图中根据地震折射勘探圈定的低速区、地质雷达勘探查明的裂隙，结合电法勘探查明的低阻异常区，对裂隙和破碎区进行了含水、不含水判译，共分出8个含水破碎区和5个不含水破碎区。" 
+        coords='409, 248, 673, 462' shape=RECT>
+  </MAP><IMG alt="云冈石窟防水保护工程地质成果图"  border="0" 
+   src="A0-1.jpg" useMap=#FPMap0 vspace=2 width="683" height="487" </p>
+
+<p align="center"><img border="0" src="xch.jpg" width="336" height="446">
+
+</p>             
+</font>                                                          
+                                                
+<p align="center"><font size="4">自主研发的动测仪（测桩、测波速、地震映像）</font>
+
+</p>             
+                                                   
+<p align="center"><font size="3">新一代岩土测试仪“<a href="js.pdf">LST-1A型动测仪</a>”，<a href="lst.htm">通过计量鉴定</a><img border="0" src="topnew.gif" width="28" height="11">&nbsp;&nbsp;&nbsp; 
+下载<a href="lst.exe">LST.exe</a>软件</font>
+
+</p>             
+                                                   
+<font size="1">                                                         
+</font>                                                          
+                                                
+<p align="center">            
+  
+<font size="4">            
+  
+&nbsp;&nbsp;云冈石窟防水保护工程物探说明&nbsp;</font></p>
+  
+<p align="left">            
+  
+<font size="3">&nbsp;&nbsp;&nbsp; 工程物探测区位于云冈石窟顶部向北7km<sup>2</sup>范围内，南起石窟崖壁，北至水泉村，西起石窟西侧崖壁，东至工人村北；重点区域是石窟顶部约0.4km<sup>2</sup>的围墙范围内。测区地处丘陵地区，大部分区域地形较为平整，局部地区陡崖峭壁，高差起伏较大。<br>                                                         
+&nbsp;&nbsp;&nbsp; 
+本次工程物探的主要任务是利用地面物探调查第四系覆盖层厚度及分层，调查基岩埋深及风化分层，查明基岩裂隙带和富水区，查明泥岩夹层和包气带上层滞水分布。利用井中方法探测井壁、钻孔周围破碎带、节理、裂隙发育分布情况，探测井壁地层分布情况。<br>                                                         
+&nbsp;&nbsp;&nbsp; 
+本次物探是防水保护设计阶段的主要勘察手段之一，根据工作任务要求，主要采用地面和井中两类方法。地面方法分别使用地震折射、高密度电法、地质雷达、面波勘探等手段。地震折射主要用于调查基岩埋深和风化程度、基岩中破碎带等分布情况；高密度电法主要用于查找地下水赋存及通道情况，推断泥岩夹层的分布规律；地质雷达主要用于查找基岩中破碎带分布规律和裂隙发育情况；面波勘探主要用于第四系覆盖层内部详细分层情况，查明粉土层和砂卵石层的厚度及分布规律。井中物探方法主要是结合钻孔分析孔周围的地质情况，推测钻孔周围目的层、破碎带的走向及空间展布。物探的主要目的是查明防水保护治理范围，为防水设计提供依据。</font></p>                                                         
+  
+<p align="left">            
+  
+<font size="2" color="##008080">
+今天是                                                                                                                                                                                                                                                                                                                     
+      <script language=JavaScript>                                                                                                                                                                                                                                                                                                                                                     
+today=new Date();                                                                                                                                                                                                                                                                                                                                
+function initArray(){                                                                                                                                                                                                                                                                                                                                
+this.length=initArray.arguments.length                                                                                                                                                                                                                                                                                                                                
+for(var i=0;i<this.length;i++)                                                                                                                                                                                                                                                                                                                                
+this[i+1]=initArray.arguments[i]  }                                                                                                                                                                                                                                                                                                                                
+var d=new initArray(                                                                                                                                                                                                                                                                                                                                
+"星期日",                                                                                                                                                                                                                                                                                                                                
+"星期一",                                                                                                                                                                                                                                                                                                                                
+"星期二",                                                                                                                                                                                                                                                                                                                                
+"星期三",                                                                                                                                                                                                                                                                                                                                
+"星期四",                                                                                                                                                                                                                                                                                                                                
+"星期五",                                                                                                                                                                                                                                                                                                                                
+"星期六");                                                                                                                                                                                                                                                                                                                                
+document.write(                                                                                                                                                                                                                                                                                                                                
+"<font color=##008080 style='font-size:10pt;font-family: 宋体'> ",                                                                                                                                                                                                                                                                                                                                
+today.getYear(),"年",                                                                                                                                                                                                                                                                                                                                
+today.getMonth()+1,"月",                                                                                                                                                                                                                                                                                                                                
+today.getDate(),"日 ",                                                                                                                                                                                                                                                                                                                                
+d[today.getDay()+1],                                                                                                                                                                                                                                                                                                                                
+"</font>" );                                                                                                                                                                                                                                                                                                                                 
+ 
+<font size="1"><font color="#990033">
+<hr>             
+<p align="left">联系地址：中国 北京 东直门内大街177号，100007&nbsp;<br>                                                                                                                                                           
+电话：010-81134119&nbsp;&nbsp;&nbsp; 6401336-505&nbsp;<br>                                                                                                                                                       
+传真：010-64013189<br>                                                    
+电子邮件：<a href="mailto:geotester@hotmail.com">geotester@hotmail.com</a>                                                             
+</p>                                                             
+                                                   
+                  </font>                                                             
+</body>           
+     
+ 
