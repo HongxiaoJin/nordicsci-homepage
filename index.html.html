@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NordicSci — Science & Technology by Hongxiao Jin</title>
+  <meta name="description" content="NordicSci showcases research and projects across the 4Gs (geomancy, geography, geology, geophysics), remote sensing, Nordic plants, and multimedia posts." />
+  <meta name="author" content="Hongxiao Jin" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="NordicSci — Science & Technology" />
+  <meta property="og:description" content="Research and projects across the 4Gs, remote sensing, Nordic plants, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nordicsci.com/" />
+  <meta property="og:image" content="/assets/og-nordicsci.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NordicSci — Science & Technology" />
+  <meta name="twitter:description" content="Research and projects across the 4Gs, remote sensing, Nordic plants, and more." />
+  <meta name="twitter:image" content="/assets/og-nordicsci.jpg" />
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="alternate" type="application/rss+xml" title="NordicSci RSS" href="/feed.xml" />
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']
+          },
+          colors: {
+            nord: {
+              50: '#f0faff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e'
+            }
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(0,0,0,0.06)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Smooth gradient background for hero */
+    .bg-grid {
+      background-image: radial-gradient(rgba(14,165,233,0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+      background-position: 0 0;
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-950">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:m-4 focus:rounded-md focus:bg-nord-500 focus:px-3 focus:py-2 focus:text-white">Skip to content</a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-7 h-7 text-nord-600"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l7.5 4.33v9.34L12 21l-7.5-4.33V7.33L12 3z"/></svg>
+          <span class="font-bold tracking-tight text-lg">NordicSci</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#fourgs" class="hover:text-nord-600">4Gs</a>
+          <a href="#remote-sensing" class="hover:text-nord-600">Remote Sensing</a>
+          <a href="#flora" class="hover:text-nord-600">Nordic Flora</a>
+          <a href="#posts" class="hover:text-nord-600">Blog & Media</a>
+          <a href="#misc" class="hover:text-nord-600">Misc</a>
+          <a href="/about/" class="hover:text-nord-600">About</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-800 px-3 py-1.5 text-sm hover:shadow-soft">
+            <span class="sr-only">Toggle dark mode</span>
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:inline" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
+          <button class="md:hidden p-2" id="menuBtn" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="#fourgs" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">4Gs</a>
+          <a href="#remote-sensing" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Remote Sensing</a>
+          <a href="#flora" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Nordic Flora</a>
+          <a href="#posts" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Blog & Media</a>
+          <a href="#misc" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Misc</a>
+          <a href="/about/" class="px-2 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden bg-grid">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+          Science across the North — from <span class="text-nord-600">Earth</span> to <span class="text-nord-600">Orbit</span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl">
+          NordicSci brings together the 4Gs (geomancy, geography, geology, geophysics), satellite remote sensing, and Nordic flora — plus notes, media, and archives from my research journey.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#fourgs" class="inline-flex items-center rounded-xl bg-nord-600 px-5 py-3 text-white font-semibold shadow-soft hover:bg-nord-700">Explore the 4Gs</a>
+          <a href="#posts" class="inline-flex items-center rounded-xl border border-slate-200 dark:border-slate-800 px-5 py-3 font-semibold hover:shadow-soft">Latest posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- The 4Gs -->
+    <section id="fourgs" class="py-16 sm:py-24">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">The 4Gs</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Geomancy · Geography · Geology · Geophysics</p>
+        </div>
+        <a href="/4g/" class="hidden sm:inline text-sm font-semibold hover:text-nord-600">See all →</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Geomancy -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-nord-100 text-nord-700 group-hover:bg-nord-200">☯️</span>
+            <h3 class="font-semibold">Geomancy</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Traditions like <em>Fengshui</em> and environmental psychology; methods, case studies, and talks.</p>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/4g/geomancy/">Read more →</a>
+        </article>
+        <!-- Geography -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-nord-100 text-nord-700 group-hover:bg-nord-200">🗺️</span>
+            <h3 class="font-semibold">Geography</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Landscape dynamics, land surface phenology, human–environment interactions.</p>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/4g/geography/">Read more →</a>
+        </article>
+        <!-- Geology -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-nord-100 text-nord-700 group-hover:bg-nord-200">🪨</span>
+            <h3 class="font-semibold">Geology</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Field notes, thin sections, and tectonic stories across Scandinavia and beyond.</p>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/4g/geology/">Read more →</a>
+        </article>
+        <!-- Geophysics -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-nord-100 text-nord-700 group-hover:bg-nord-200">📡</span>
+            <h3 class="font-semibold">Geophysics</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Signals from Earth: seismics, EM, gravimetry, and modelling insights.</p>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/4g/geophysics/">Read more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Remote Sensing -->
+    <section id="remote-sensing" class="py-16 sm:py-24 border-t border-slate-200 dark:border-slate-800">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Remote Sensing</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Satellite platforms, data platforms, algorithms, and open code.</p>
+        </div>
+        <a href="/remote-sensing/" class="hidden sm:inline text-sm font-semibold hover:text-nord-600">See all →</a>
+      </div>
+      <div class="mt-8 grid gap-6 lg:grid-cols-3">
+        <!-- Platforms -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:shadow-soft">
+          <h3 class="font-semibold flex items-center gap-2">Platforms <span class="text-xs font-medium text-slate-500">(Sentinel‑1/2/3, MODIS, Landsat, VIIRS…)</span></h3>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+            <li>Acquisition timelines, specs, calibration notes.</li>
+            <li>BRDF/WeBeLS normalization and surface reflectance workflows.</li>
+            <li>Time-series phenology (Timesat, custom Python/Fortran).</li>
+          </ul>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/remote-sensing/platforms/">Learn more →</a>
+        </article>
+        <!-- Data Hubs -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:shadow-soft">
+          <h3 class="font-semibold">Data & Processing</h3>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+            <li>Copernicus, NASA DAACs, AWS Open Data.</li>
+            <li>xarray/rasterio/GDAL recipes; HPC & parallelization strategies.</li>
+            <li>Reproducible pipelines and CF-compliant NetCDF/GeoTIFF outputs.</li>
+          </ul>
+          <a class="mt-4 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800" href="/remote-sensing/data/">Get datasets →</a>
+        </article>
+        <!-- Code -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:shadow-soft">
+          <h3 class="font-semibold">Code & Papers</h3>
+          <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Links to GitHub repos, notebooks, and related publications.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="https://github.com/" class="text-xs px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">GitHub</a>
+            <a href="/publications/" class="text-xs px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Publications</a>
+            <a href="/software/" class="text-xs px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Software</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Nordic Flora -->
+    <section id="flora" class="py-16 sm:py-24">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Nordic Herb & Plant Species</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Field guides, herbarium notes, and phenology snapshots.</p>
+        </div>
+        <a href="/flora/" class="hidden sm:inline text-sm font-semibold hover:text-nord-600">Species index →</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Example cards; replace with real species pages -->
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400">Image</div>
+          <div class="p-5">
+            <h3 class="font-semibold">Vaccinium vitis-idaea (Lingonberry)</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Ecology, uses, and seasonal patterns with satellite context.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400">Image</div>
+          <div class="p-5">
+            <h3 class="font-semibold">Betula pubescens (Downy birch)</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Phenophases and environmental drivers across latitudinal gradients.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft">
+          <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400">Image</div>
+          <div class="p-5">
+            <h3 class="font-semibold">Empetrum nigrum (Crowberry)</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Habitat notes and links to spectral characteristics.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Posts & Media -->
+    <section id="posts" class="py-16 sm:py-24 border-t border-slate-200 dark:border-slate-800">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Blog · Videos · Photos · Essays</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Latest from the lab and the field. Subscribe via RSS.</p>
+        </div>
+        <a href="/blog/" class="hidden sm:inline text-sm font-semibold hover:text-nord-600">Browse all posts →</a>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Placeholder posts; you can automate with Jekyll or any SSG later -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft">
+          <time class="text-xs text-slate-500">2025‑08‑01</time>
+          <h3 class="mt-2 font-semibold">Sentinel‑2 BRDF (WeBeLS) update</h3>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Notes on parameter tuning, QA handling, and CF‑compliant outputs.</p>
+          <a href="/blog/webels-update/" class="mt-3 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800">Read →</a>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft">
+          <time class="text-xs text-slate-500">2025‑07‑18</time>
+          <h3 class="mt-2 font-semibold">Field diary: Skåne coastal flora</h3>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Photo set and herb notes from a summer transect.</p>
+          <a href="/blog/skane-flora/" class="mt-3 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800">Read →</a>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-soft">
+          <time class="text-xs text-slate-500">2025‑06‑09</time>
+          <h3 class="mt-2 font-semibold">On geomancy & environmental psychology</h3>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Slides and a short essay connecting tradition and modern science.</p>
+          <a href="/blog/geomancy-notes/" class="mt-3 inline-block text-sm font-semibold text-nord-700 hover:text-nord-800">Read →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Misc / Archive -->
+    <section id="misc" class="py-16 sm:py-24">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Miscellaneous & Archive</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Legacy content from earlier homepages, datasets, and notes.</p>
+        </div>
+        <a href="/archive/" class="hidden sm:inline text-sm font-semibold hover:text-nord-600">Full archive →</a>
+      </div>
+      <div class="mt-8 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold">Old homepage snapshots</h3>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">A curated list of older posts, projects, and media preserved for reference.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+            <li><a class="underline decoration-slate-300 hover:decoration-nord-400" href="/archive/2016-2020/">2016–2020 archive</a></li>
+            <li><a class="underline decoration-slate-300 hover:decoration-nord-400" href="/archive/2010-2015/">2010–2015 archive</a></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold">Contact & Collaboration</h3>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">I’m open to research collaborations and student projects.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+            <li>Email: <a class="underline decoration-slate-300 hover:decoration-nord-400" href="mailto:contact@nordicsci.com">contact@nordicsci.com</a></li>
+            <li>GitHub: <a class="underline decoration-slate-300 hover:decoration-nord-400" href="https://github.com/">github.com</a></li>
+            <li>ORCID/Scholar: add links here</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-24 border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500">© <span id="year"></span> NordicSci. All rights reserved.</p>
+        <nav class="flex items-center gap-4 text-slate-600 dark:text-slate-300">
+          <a class="hover:text-nord-600" href="/privacy/">Privacy</a>
+          <a class="hover:text-nord-600" href="/terms/">Terms</a>
+          <a class="hover:text-nord-600" href="/sitemap.xml">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Theme toggle with persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    themeToggle?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
